@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+{% for message in messages %}
+<!DOCTYPE html>
+<html>
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>Email</title>
+	</head>
+<body>
+		<ul class="list-group">
+			<li class="list-group-item"> from: {{ message.from }} </li>
+			<li class="list-group-item"> subject: {{ message.subject }} </li>
+			<li class="list-group-item"> Message: <a href="{{url_for('show_message', id = message.id)}}" class="btn btn-warning"> Open </a> </li>
+		</ul>
+
+</body>
+</html>
+
+{% endfor %}
+
+{% endblock %}
+
+	<!-- Required meta tags -->

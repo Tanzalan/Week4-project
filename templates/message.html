@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+
+{* To do: add HTML content here *}
+<!DOCTYPE html>
+<html>
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>Email</title>
+	</head>
+<body>
+		<ul class="list-group">
+			<li class="list-group-item"> from: {{ message.from }} </li>
+			<li class="list-group-item"> subject: {{ message.subject }} </li>
+			<li class="list-group-item"> Message: {{ message.body }}</li>
+		</ul>
+
+</body>
+</html>
+
+{% endblock %}
